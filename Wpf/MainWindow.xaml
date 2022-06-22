@@ -1,0 +1,72 @@
+﻿<Window x:Class="Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="800" Width="600" WindowStartupLocation="CenterScreen"
+          AllowsTransparency="True" WindowStyle="None"
+        >
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="400px"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="Auto" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid  Grid.Row="0"  Grid.Column="0" HorizontalAlignment="Left">
+            <TextBlock Padding="5" FontSize="16" Foreground="Yellow" TextAlignment="left" Visibility="Collapsed">KT.VideoStream.Ver.1.0.0</TextBlock>
+        </Grid>
+        <Grid  Grid.Row="0"  Grid.Column="1" HorizontalAlignment="Right">
+            <TextBlock Padding="5"  FontSize="16" Foreground="White" TextAlignment="Right" Name="Timers" Visibility="Collapsed">Timer</TextBlock>
+        </Grid>
+
+        <Grid  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Ddistance" >
+
+        </Grid>
+        <Grid  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"  >
+            <TextBlock Padding="5"  FontSize="30" Foreground="White" 
+                       TextAlignment="Center" Name="msgno" Text="隐藏" Visibility="Hidden"></TextBlock>
+        </Grid>
+        <Grid  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" >
+            <TextBlock Padding="5"  FontSize="25" Foreground="White" HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                       Name="msgyes" Text="" Visibility="Visible"></TextBlock>
+        </Grid>
+        <Grid  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+               VerticalAlignment="Center" Width="600" Height="400" x:Name="thiscoller">
+            <!--<Grid.Background>
+                <ImageBrush ImageSource=".\image\img@3x.png"  Stretch="None" />
+            </Grid.Background>-->
+            <Image Name="Showpic"  HorizontalAlignment="Center" 
+                 Stretch="Fill" 
+                   Width="180"
+                   Height="180"
+                VerticalAlignment="Center" >
+            </Image>
+            <!--<Viewbox>-->
+                <!--<Image Name="Showpic"  HorizontalAlignment="Center" 
+                 Stretch="None" 
+                   Width="{Binding RelativeSource={RelativeSource Self}, Path=Source.PixelWidth}"
+                   Height="{Binding RelativeSource={RelativeSource Self}, Path=Source.PixelHeight}"
+                   Source="{Binding CtrlImage, IsAsync=True}"
+                VerticalAlignment="Center" >
+                </Image>-->
+            <!--</Viewbox>-->
+            <TextBlock FontSize="80" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"
+                       Text="再见" Name="MsgInfo" Visibility="Collapsed"></TextBlock>
+        </Grid>
+
+        <Grid  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" >
+            <TextBlock  Padding="3" Grid.Row="4"  TextAlignment="Right" Foreground="White" 
+                        FontSize="13" Visibility="Collapsed">Right 2020</TextBlock>
+        </Grid>
+    </Grid>
+
+</Window>
